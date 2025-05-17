@@ -1,0 +1,9 @@
+name: unittests
+
+jobs: 
+  steps:
+    name: show python version
+    run : python --version
+
+    name: install requirement
+    run : pip install -r requirements.txt
