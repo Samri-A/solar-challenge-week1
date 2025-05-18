@@ -1,2 +1,8 @@
-Python 3.13.3
-Streamlit version 1.45.1
+numpy                     2.2.5
+matplotlib                3.10.3
+pandas                    2.2.3
+pip                       25.1.1
+scipy                     1.15.3
+seaborn                   0.13.2
+streamlit                 1.45.1
+windrose                  1.9.2

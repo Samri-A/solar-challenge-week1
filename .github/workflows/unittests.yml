@@ -1,9 +1,21 @@
 name: unittests
 
-jobs: 
-  steps:
-    name: show python version
-    run : python --version
+on: [push]
 
-    name: install requirement
-    run : pip install -r requirements.txt
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v13
+        with:
+          python-version: '3.x'
+          
+          architecture: 'x64'
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Install required packages
+        run: pip install -r requirements.txt
